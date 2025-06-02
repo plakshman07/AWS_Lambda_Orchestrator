@@ -1,22 +1,26 @@
-# Durable Kafka Messaging (.NET)
+# 🛰️ AWS Lambda + Step Functions + Kafka Orchestration
 
-This repository demonstrates using **Azure Durable Functions** to send messages to **Apache Kafka**, and consuming them using a **.NET Core Console App**.
+This project demonstrates an event-driven architecture using **AWS Step Functions** to orchestrate **.NET-based AWS Lambda** functions, and **Apache Kafka** (via Docker) as a reliable message broker.
 
-## 🔧 Tech Stack
+> ✅ This is the AWS equivalent of an Azure Durable Function orchestration pattern.
 
-- Azure Durable Functions (.NET 6)
-- Confluent.Kafka (Kafka .NET client)
-- Apache Kafka (Docker)
-- .NET 6 Console App
+---
 
-## 📁 Projects
+## 🧩 Architecture Overview
 
-| Project               | Description                            |
-|-----------------------|----------------------------------------|
-| `KafkaMessageProducer` | Durable Function to publish messages to Kafka |
-| `KafkaMessageConsumer` | Console App to read messages from Kafka |
+- **AWS Step Functions** define the orchestration flow using Amazon States Language (ASL).
+- **AWS Lambda (C# / .NET 8)** functions perform individual steps like generating messages or processing data.
+- **Apache Kafka** (via Docker) is used for asynchronous messaging.
+- **.NET Core Console App** acts as the Kafka consumer, reading messages in real time.
 
-## 🐳 Running Kafka Locally
+---
 
-```bash
-docker-compose up -d
+## 📂 Project Structure
+
+```plaintext
+AWS-Orchestration-Project/
+│
+├── src/
+│   ├── SayHelloFunction/           # Lambda function to say hello
+│   ├── KafkaPublisherFunction/     # Lambda function to publish to Kafka
+│   ├── Orchestrator/
