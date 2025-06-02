@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3j7KJJxoLzo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Keshv\\source\\repos\\AWS_Lambda_Orchestrator\\AWS_Lambda_Orchestrator\\AWS_Lambda_Orchestrator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Keshv\\.nuget\\packages\\amazon.lambda.core\\2.5.1\\amazon.lambda.core.2.5.1.nupkg.sha512",
+    "C:\\Users\\Keshv\\.nuget\\packages\\confluent.kafka\\2.10.0\\confluent.kafka.2.10.0.nupkg.sha512",
+    "C:\\Users\\Keshv\\.nuget\\packages\\librdkafka.redist\\2.10.0\\librdkafka.redist.2.10.0.nupkg.sha512"
+  ],
+  "logs": []
+}
